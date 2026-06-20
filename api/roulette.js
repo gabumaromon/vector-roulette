@@ -181,7 +181,7 @@ function buildSlackMessage() {
   );
   const practiceText = chosenPracticeKeys
     .map((key) => practiceLabels[key] || key)
-    .join("  ");
+    .join("\n");
 
   // 3. hints からランダムで3〜5件選択
   const hintCount = randomInt(3, Math.min(5, hints.length));
@@ -190,14 +190,20 @@ function buildSlackMessage() {
 
   // Slack に返すメッセージ本文（mrkdwn 形式）
   const text = [
-    "🎲 *Today's Topic*",
-    `*${selected.topic}*`,
-    "",
-    `*Suggested Practice*  ${practiceText}`,
-    "━━━━━━━━━━",
-    "💡 *Hints if you get stuck*",
-    hintText,
-  ].join("\n");
+  "🎲 *Today's Topic*",
+  "",
+  `*${selected.topic}*`,
+  "",
+  "━━━━━━━━━━",
+  "*Suggested Practice*",
+  "",
+  practiceText,
+  "",
+  "━━━━━━━━━━",
+  "💡 *Hints if you get stuck*",
+  "",
+  hintText,
+].join("\n");
 
   return text;
 }
