@@ -192,7 +192,7 @@ function buildSlackMessage() {
   const text = [
   "🎲 *Today's Topic*",
   "",
-  `*${selected.topic}*`,
+ `【 ${selected.topic} 】`,
   "",
   "━━━━━━━━━━",
   "*Suggested Practice*",
