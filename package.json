@@ -1,0 +1,12 @@
+{
+  "name": "slack-roulette",
+  "version": "1.0.0",
+  "description": "Slack /roulette slash command - randomly pick an English speaking practice topic",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
